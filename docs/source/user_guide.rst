@@ -40,5 +40,3 @@ The .circleci/config.yml file defines the deployment pipeline configuration for 
 Use Case: Adding Automated Testing to Deployment Pipeline
 ----------------------------------------------------------
 Emily, a QA engineer, wants to add automated testing to the deployment pipeline in CircleCI. She modifies the .circleci/config.yml file to include test execution steps before deploying the application. After ensuring that all tests pass, she commits the changes to the repository, triggering the deployment pipeline.
-
-This user guide provides step-by-step instructions for common use cases encountered while working with the Lettings application. Feel free to refer to this guide whenever you need assistance with modifying tests, build procedures, or deployment configurations.
