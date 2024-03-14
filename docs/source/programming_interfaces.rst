@@ -5,7 +5,7 @@ The application provides various programming interfaces to streamline developmen
 
 1. Django Shell
 ----------------
-The Django shell allows direct interaction with the Django project and its models. To access the Django shell, run the following command in the project's root directory:
+The Django shell allows interaction with the Django project and its models. To access the Django shell, run the following command in the project's root directory:
 
 .. code-block:: bash
 
