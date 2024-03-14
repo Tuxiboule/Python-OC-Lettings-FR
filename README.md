@@ -13,8 +13,7 @@ All usage instructions are detailed on [ReadTheDocs](https://lettings-rtd.readth
 
 ## Context - 
 This project represents the final project of my training.
-Initially quite comprehensive and complex to grasp,
-it becomes interesting and rewarding as you progress.
+Initially quite comprehensive and complex to grasp, it becomes interesting and rewarding as you progress.
 
 ## Skills
 - Python 
