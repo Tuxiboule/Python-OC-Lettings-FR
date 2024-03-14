@@ -12,17 +12,16 @@ WORKDIR /usr/src/
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1 
 
-# install stuff
+# install system dependencies
 RUN apt-get update && apt-get -y dist-upgrade
 
-# lint
+# linting
 RUN pip install --upgrade pip pytest
 RUN pip install flake8==6.0.0
 COPY . /usr/src/
 RUN flake8 --ignore=E501,F401 .
 
-
-# install python dependencies
+# install Python dependencies
 COPY ./requirements.txt .
 RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/wheels -r requirements.txt
 
@@ -45,13 +44,11 @@ ENV HOME=/home/
 ENV APP_HOME=/home/web
 
 # install dependencies
-
 WORKDIR $APP_HOME
 COPY --from=builder /usr/src/wheels /wheels
 COPY --from=builder /usr/src/requirements.txt .
 RUN pip install --upgrade pip pytest
 RUN pip install --no-cache /wheels/*
-
 
 # copy entrypoint.sh
 COPY ./entrypoint.sh .
@@ -61,22 +58,20 @@ RUN chmod +x $APP_HOME/entrypoint.sh
 # copy project
 COPY . $APP_HOME
 
+# add www-data user to app group
 RUN usermod -a -G app www-data
-# chown all the files to the app user
+
+# set permissions and execute necessary commands
 RUN mkdir -p /home/web/staticfiles
 RUN chown -R app:app /home/web/staticfiles
 RUN chmod -R 755 /home/web/staticfiles/
-
 RUN python manage.py collectstatic --no-input
-
 RUN python manage.py migrate
 RUN chmod -R 755 /home/web/
 RUN pytest
 
-
-# change to the app user
+# switch to the app user
 USER app
-
 
 # run entrypoint.sh
 ENTRYPOINT ["/home/web/entrypoint.sh"]
