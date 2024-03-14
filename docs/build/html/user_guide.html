@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>User Guide &#8212; Lettings 03/2024 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=ecdd1081"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Deployment Management Procedures" href="deployment_management_procedures.html" />
+    <link rel="prev" title="Programming Interfaces" href="programming_interfaces.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="user-guide">
+<h1>User Guide<a class="headerlink" href="#user-guide" title="Link to this heading">¶</a></h1>
+<p>Welcome to the Lettings application user guide. This guide will help you navigate through various tasks and use cases commonly encountered while working with the application.</p>
+<section id="modifying-tests-in-tests-py-files">
+<h2>1. Modifying Tests in tests.py Files<a class="headerlink" href="#modifying-tests-in-tests-py-files" title="Link to this heading">¶</a></h2>
+<p>The tests.py files, present in each Django app, contain unit tests to ensure the functionality of the application. Follow these steps to modify tests:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Locate the tests.py file in the Django app you wish to modify.</p></li>
+<li><p>Open the file and locate the test cases relevant to the functionality you want to change.</p></li>
+<li><p>Modify the test cases as needed to reflect the desired behavior or functionality changes.</p></li>
+<li><p>Save the file and run the tests using the Django management command <cite>python manage.py test</cite> to ensure that the changes do not introduce any regressions.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="use-case-updating-property-validation-tests">
+<h2>Use Case: Updating Property Validation Tests<a class="headerlink" href="#use-case-updating-property-validation-tests" title="Link to this heading">¶</a></h2>
+<p>Sarah, a developer working on the Lettings application, needs to update the validation tests for property models. She locates the tests.py file in the properties app, modifies the relevant test cases to validate new property attributes, and ensures that all tests pass before committing the changes.</p>
+</section>
+<section id="modifying-build-procedure-in-dockerfile-and-docker-compose">
+<h2>2. Modifying Build Procedure in Dockerfile and docker-compose<a class="headerlink" href="#modifying-build-procedure-in-dockerfile-and-docker-compose" title="Link to this heading">¶</a></h2>
+<p>The Dockerfile and docker-compose.yml files define the build and deployment configurations for the Lettings application. Follow these steps to modify the build procedure:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Open the Dockerfile and docker-compose.yml files located in the root directory of your project.</p></li>
+<li><p>Modify the Dockerfile to include additional dependencies or configurations required for the application.</p></li>
+<li><p>Update the docker-compose.yml file to reflect any changes in service configurations or dependencies.</p></li>
+<li><p>Save the changes and rebuild the Docker images using the <cite>docker-compose build</cite> command to ensure that the modifications are applied correctly.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="use-case-adding-a-new-dependency-to-the-application">
+<h2>Use Case: Adding a New Dependency to the Application<a class="headerlink" href="#use-case-adding-a-new-dependency-to-the-application" title="Link to this heading">¶</a></h2>
+<p>John, a DevOps engineer, needs to add a new Python library to the Lettings application. He updates the requirements.txt file with the new dependency, modifies the Dockerfile to install the library, and updates the docker-compose.yml file to rebuild the Docker images with the latest changes.</p>
+</section>
+<section id="modifying-deployment-procedure-in-circleci-config-yml">
+<h2>3. Modifying Deployment Procedure in circleci/config.yml<a class="headerlink" href="#modifying-deployment-procedure-in-circleci-config-yml" title="Link to this heading">¶</a></h2>
+<p>The .circleci/config.yml file defines the deployment pipeline configuration for CircleCI. Follow these steps to modify the deployment procedure:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Open the .circleci/config.yml file located in the root directory of your project.</p></li>
+<li><p>Locate the deployment section and modify the steps to include any additional tasks or configurations required for deployment.</p></li>
+<li><p>Save the changes and commit them to your repository to trigger the CircleCI pipeline and deploy the updated application.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="use-case-adding-automated-testing-to-deployment-pipeline">
+<h2>Use Case: Adding Automated Testing to Deployment Pipeline<a class="headerlink" href="#use-case-adding-automated-testing-to-deployment-pipeline" title="Link to this heading">¶</a></h2>
+<p>Emily, a QA engineer, wants to add automated testing to the deployment pipeline in CircleCI. She modifies the .circleci/config.yml file to include test execution steps before deploying the application. After ensuring that all tests pass, she commits the changes to the repository, triggering the deployment pipeline.</p>
+<p>This user guide provides step-by-step instructions for common use cases encountered while working with the Lettings application. Feel free to refer to this guide whenever you need assistance with modifying tests, build procedures, or deployment configurations.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Lettings</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="project_description.html">Project Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start_guide.html">Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technologies_languages.html">Technologies and Languages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database_structure_models.html">Database Structure and Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="programming_interfaces.html">Programming Interfaces</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modifying-tests-in-tests-py-files">1. Modifying Tests in tests.py Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-case-updating-property-validation-tests">Use Case: Updating Property Validation Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modifying-build-procedure-in-dockerfile-and-docker-compose">2. Modifying Build Procedure in Dockerfile and docker-compose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-case-adding-a-new-dependency-to-the-application">Use Case: Adding a New Dependency to the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modifying-deployment-procedure-in-circleci-config-yml">3. Modifying Deployment Procedure in circleci/config.yml</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-case-adding-automated-testing-to-deployment-pipeline">Use Case: Adding Automated Testing to Deployment Pipeline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployment_management_procedures.html">Deployment Management Procedures</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="programming_interfaces.html" title="previous chapter">Programming Interfaces</a></li>
+      <li>Next: <a href="deployment_management_procedures.html" title="next chapter">Deployment Management Procedures</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Guillaume Vinuesa.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/user_guide.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

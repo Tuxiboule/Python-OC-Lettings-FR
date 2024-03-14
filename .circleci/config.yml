@@ -1,0 +1,24 @@
+version: 2.1
+
+# Définition des environnements Docker Hub
+docker-auth: &docker-auth
+  auth:
+    username: $DOCKERHUB_USERNAME
+    password: $DOCKERHUB_PAT
+
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.12.2
+    steps:
+      - checkout
+      - setup_remote_docker
+            
+      - run:
+          name: Build and Push application Docker image
+          command: | 
+            docker volume prune -f
+            docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PAT
+            docker-compose -f docker-compose.yml build
+            docker push tuxiboule/projet_13:latest
+            curl -X GET https://api.render.com/deploy/srv-cne8i57109ks738ubks0?key=hDchJBfgr3s

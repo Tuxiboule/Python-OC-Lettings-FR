@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Programming Interfaces &#8212; Lettings 03/2024 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=ecdd1081"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User Guide" href="user_guide.html" />
+    <link rel="prev" title="Database Structure and Models" href="database_structure_models.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="programming-interfaces">
+<h1>Programming Interfaces<a class="headerlink" href="#programming-interfaces" title="Link to this heading">¶</a></h1>
+<p>The application provides various programming interfaces to streamline development and management tasks. Below is a breakdown of the available interfaces:</p>
+<section id="django-shell">
+<h2>1. Django Shell<a class="headerlink" href="#django-shell" title="Link to this heading">¶</a></h2>
+<p>The Django shell allows direct interaction with the Django project and its models. To access the Django shell, run the following command in the project’s root directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>shell
+</pre></div>
+</div>
+<p>In the Django shell, you can perform various tasks, including:</p>
+<ul class="simple">
+<li><p>Interact with Django models to create, read, update, and delete (CRUD) data.</p></li>
+<li><p>Test database queries and model methods interactively.</p></li>
+<li><p>Perform custom data manipulation and management tasks.</p></li>
+</ul>
+</section>
+<section id="management-commands">
+<h2>2. Management Commands<a class="headerlink" href="#management-commands" title="Link to this heading">¶</a></h2>
+<p>Django provides a set of management commands for performing administrative tasks. These commands are invoked via the <code class="docutils literal notranslate"><span class="pre">manage.py</span></code> script and include operations such as:</p>
+<ul class="simple">
+<li><p>Creating a superuser: Use the command <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">createsuperuser</span></code> to create a new administrative user.</p></li>
+<li><p>Running database migrations: Execute <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span></code> to apply pending migrations and update the database schema.</p></li>
+<li><p>Managing static files: Commands like <code class="docutils literal notranslate"><span class="pre">collectstatic</span></code> help gather static files from various locations into a single location.</p></li>
+</ul>
+<p>[Django manage.py documentation](<a class="reference external" href="https://docs.djangoproject.com/en/5.0/ref/django-admin/">https://docs.djangoproject.com/en/5.0/ref/django-admin/</a>)</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Lettings</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="project_description.html">Project Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start_guide.html">Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technologies_languages.html">Technologies and Languages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="database_structure_models.html">Database Structure and Models</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Programming Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#django-shell">1. Django Shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#management-commands">2. Management Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment_management_procedures.html">Deployment Management Procedures</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="database_structure_models.html" title="previous chapter">Database Structure and Models</a></li>
+      <li>Next: <a href="user_guide.html" title="next chapter">User Guide</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Guillaume Vinuesa.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/programming_interfaces.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
