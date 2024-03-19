@@ -11,7 +11,7 @@ Comprehensive documentation
 ## Usage
 All usage instructions are detailed on [ReadTheDocs](https://lettings-rtd.readthedocs.io/en/latest/).
 
-## Context - 
+## Context - Dockerize a django app
 This project represents the final project of my training.
 Initially quite comprehensive and complex to grasp, it becomes interesting and rewarding as you progress.
 
